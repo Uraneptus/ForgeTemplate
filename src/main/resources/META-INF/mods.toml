@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[39,)"
+license="All rights reserved"
+issueTrackerURL="https://github.com/Uraneptus/ForgeTemplate/issues"
+
+[[mods]]
+modId = "modid"
+version = "${file.jarVersion}"
+displayName = "Forge Template Mod"
+logoFile = "modid_banner.png"
+authors = "Uraneptus"
+credits = ""
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/"
+description = '''
+'''
+
+[[dependencies.modid]]
+    modId="forge"
+    mandatory=true
+    versionRange="[39,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.modid]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.1,)"
+    ordering="NONE"
+    side="BOTH"
