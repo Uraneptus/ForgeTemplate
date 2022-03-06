@@ -1,6 +1,7 @@
 package com.uraneptus.modid;
 
 import com.uraneptus.modid.core.data.client.LangProvider;
+import com.uraneptus.modid.core.data.server.Advancements;
 import com.uraneptus.modid.core.registry.FTBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
@@ -42,7 +43,7 @@ public class ModId {
             generator.addProvider(new LangProvider(generator));
         }
         if (event.includeServer()) {
-
+            generator.addProvider(new Advancements(generator, helper));
         }
     }
 
