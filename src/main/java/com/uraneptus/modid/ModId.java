@@ -1,5 +1,7 @@
 package com.uraneptus.modid;
 
+import com.uraneptus.modid.core.data.client.LangProvider;
+import com.uraneptus.modid.core.registry.FTBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -22,7 +24,7 @@ public class ModId {
         IEventBus eventBus =  FMLJavaModLoadingContext.get().getModEventBus();
         eventBus.addListener(this::setup);
 
-
+        FTBlocks.BLOCKS.register(eventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -37,7 +39,7 @@ public class ModId {
         ExistingFileHelper helper = event.getExistingFileHelper();
 
         if (event.includeClient()) {
-
+            generator.addProvider(new LangProvider(generator));
         }
         if (event.includeServer()) {
 
